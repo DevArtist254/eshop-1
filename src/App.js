@@ -1,10 +1,13 @@
 import "./App.css"
-import Homepage from "./hompage.comp"
+import {Switch, Route} from "react-router-dom/cjs/react-router-dom"
+import Homepage from "./pages/hompage.comp"
 
 function App() {
  return (
   <div className="App">
-   <Homepage />
+   <Switch>
+    <Route exact path="/" component={Homepage} />
+   </Switch>
   </div>
  )
 }
